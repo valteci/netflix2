@@ -18,60 +18,26 @@
 
     <body>
 
-        <!-- navbar -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="../../home/index.html">
-                <img src="../../img/logo.png" alt="Bootstrap" width="70" height="80">
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item ms-5 me-5">
-                    <a class="nav-link active" aria-current="page" href="../../home/index.html">Home</a>
-                  </li>
-                  <li class="nav-item me-5">
-                    <a class="nav-link" href="../../matriculaAluno/matriculas.html">Matr&iacute;cula</a>
-                  </li>
-                  <li class="nav-item me-5">
-                    <a class="nav-link" href="../../certificados/certificados.html">Certificados</a>
-                  </li>
-                  <li class="nav-item dropdown me-5">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Entrar
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="../../login/loginAluno.html">Aluno</a></li>
-                      <li><a class="dropdown-item" href="../../login/loginInstitucional.html">Institui&ccedil;&atilde;o</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-        </nav>
-
         <!-- titulo - painel -->
         <div class="container mt-5">
           <h1 class="pb-2 border-bottom">
-            Painel
+            Guest
             <img src="../../img/painel.png" alt="flaticon - vectorsmarket15">
           </h1>
         </div>
 
         <!-- grid -->
-        <div class="container text-center mt-5">
+        <div class="container text-center p-5">
             <div class="row">
               <div class="col-md-6 col-lg-6 coluna gridTopLeft">
                 <button onclick="redirecionarParaPaginaCurso()" type="button" class="btn btn-primary btn-lg btn-block h-100 w-100 btnTopLeft">
-                  Cursos
+                  Cadastre-se
                   <img src="../../img/cursos.png" alt="flaticon - smashingstocks">
                 </button>
               </div>
               <div class="col-md-6 col-lg-6 coluna gridTopRight">
                 <button onclick="redirecionarParaPaginaTurma()" type="button" class="btn btn-primary btn-lg btn-block h-100 w-100 btnTopRight">
-                  Turmas
+                  Entrar
                   <img src="../../img/turmas.png" alt="flaticon - Freepik">
                 </button>
               </div>
@@ -79,36 +45,17 @@
             <div class="row">
               <div class="col-md-6 col-lg-6 coluna gridBottomLeft">
                 <button type="button" class="btn btn-primary btn-lg btn-block h-100 w-100 btnBottomLeft"  onclick="redirecionarParaPaginaAluno()">
-                  Alunos
+                  Trailer de Jogos
                   <img src="../../img/alunos.png" alt="flaticon - Freepik">
                 </button>
               </div>
               <div class="col-md-6 col-lg-6 coluna gridBottomRight">
                 <button onclick="redirecionarParaPaginaEmitirCertificado()" type="button" class="btn btn-primary btn-lg btn-block h-100 w-100 btnBottomRight">
-                  Certificados
+                  Trailer de Filmes
                   <img src="../../img/certificados.png" alt="flaticon - Freepik">
                 </button>
               </div>
             </div>
-
-        </div>
-
-        <!-- footer -->
-        <div class="container">
-          <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col-md-4 d-flex align-items-center">
-              <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-                <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-              </a>
-              <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 Dark Hash.LTDA</span>
-            </div>
-        
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-              <li class="ms-3"><a class="text-body-secondary" href="https://facebook.com/" target="_blank"><img src="../../img/facebook_32.png" alt=""></a></li>
-              <li class="ms-3"><a class="text-body-secondary" href="https://instagram.com/" target="_blank"><img src="../../img/instagram_32.png" alt=""></a></li>
-              <li class="ms-3"><a class="text-body-secondary" href="https://x.com" target="_blank"><img src="../../img/x_32.png" alt=""></a></li>
-            </ul>
-          </footer>
         </div>
 
         <script 

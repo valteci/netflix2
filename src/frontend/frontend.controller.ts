@@ -15,7 +15,7 @@ import { AuthGuard } from '@nestjs/passport';
 import { FrontendService } from './frontend.service';
 import { readFileSync } from 'fs';
 
-@Controller('frontend')
+@Controller('')
 export class FrontendController {
 
     constructor(private service: FrontendService) {
@@ -27,7 +27,7 @@ export class FrontendController {
         return this.service.signin();
     }
 
-    @Get('cadastro')
+    @Get('cadastrar')
     signup() {
         return this.service.signup();
     }
@@ -37,11 +37,17 @@ export class FrontendController {
         return this.service.home();
     }
     
-    @Get('conteudo')
-    conteudo() {
+    
+    @Get('trailerFilmes')
+    trailerFilmes() {
         return this.service.load();
     }
 
+    @Get('trailerJogos')
+    trailerJogos() {
+        return this.service.load();
+    }
+    
     @UseGuards(AuthGuard('jwt'))
     @Get('conteudo_auth')
     conteudoAuth() {
