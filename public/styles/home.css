@@ -1,0 +1,20 @@
+#carrosselHome {
+     /* Altura desejada para o carrossel */
+    overflow: hidden; */ /* Para ocultar qualquer conteúdo que exceda a altura definida */
+    max-width: 1000px;
+  }
+
+  .corrossel-container {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+  }
+          
+  @media (max-width: 769px) {
+
+    #carrosselHome .carousel-inner .carousel-item img {
+      max-width: 100%;
+      width: auto;
+      height: auto;
+    } 
+  }
