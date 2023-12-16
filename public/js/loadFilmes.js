@@ -9,9 +9,7 @@ const acesso_negado = `
 </head>
 <body>
   <div class="unauthorized-wrapper">
-    <h1>Oops! Acesso Não Autorizado</h1>
-    <img src="https://media.giphy.com/media/gx54c2i8Iz2hq/giphy.gif" alt="Acesso Negado" width="300">
-    <p>Parece que você tentou acessar uma área sem permissão.</p>
+    <h1>FAÇA <a href="http://192.168.25.133:8080/entrar">LOGIN<a> PARA ACESSAR ESSA PÁGINA OU <a href="http://192.168.25.133:8080/cadastrar">CADASTRE-SE<a></h1>
   </div>  
 </body>
 </html>`
