@@ -14,7 +14,7 @@ function enviarFormulario(event) {
         
 
     
-    fetch('http://192.168.25.133:8080/Auth/signup', {
+    fetch('http://MEU_IP:8080/Auth/signup', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ function enviarFormulario(event) {
             return response.json();
         })
         .then(data => {
-            window.location.href = 'http://192.168.25.133:8080/home';
+            window.location.href = 'http://MEU_IP:8080/home';
         })
         .catch(error => {
             alert('Não foi possível fazer o cadastro!');
