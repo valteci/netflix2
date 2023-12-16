@@ -24,7 +24,7 @@ function carregarPaginaAcessoNegado() {
 
 function buscarConteudo() {
 
-    fetch('http://192.168.25.133:3000/frontend/conteudo_auth', {
+    fetch('http://192.168.25.133:8080/conteudoFilmes_auth', {
       method: 'GET',
       headers: {
           Authorization: `Bearer ${localStorage.getItem('access_token')}`

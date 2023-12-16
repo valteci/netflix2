@@ -7,13 +7,15 @@ import {
     Post,
     Put,
     Req,
+    Res,
     UseGuards
 } from '@nestjs/common';
 
-import { Request } from 'express';
+import { Request, Response } from 'express';
 import { AuthGuard } from '@nestjs/passport';
 import { FrontendService } from './frontend.service';
-import { readFileSync } from 'fs';
+import { readFileSync, createReadStream } from 'fs';
+
 
 @Controller('')
 export class FrontendController {
@@ -21,7 +23,13 @@ export class FrontendController {
     constructor(private service: FrontendService) {
 
     }
-    
+
+    @UseGuards(AuthGuard('jwt'))
+    @Get('me')
+    getMe(@Req() req: Request) {
+        return req.user;
+    }
+
     @Get('entrar')
     signin() {
         return this.service.signin();
@@ -40,18 +48,33 @@ export class FrontendController {
     
     @Get('trailerFilmes')
     trailerFilmes() {
-        return this.service.load();
+        return this.service.loadFilmes();
     }
 
     @Get('trailerJogos')
     trailerJogos() {
-        return this.service.load();
+        return this.service.loadJogos();
     }
     
     @UseGuards(AuthGuard('jwt'))
-    @Get('conteudo_auth')
-    conteudoAuth() {
-        return this.service.conteudo();
+    @Get('conteudoJogos_auth')
+    conteudoAuthJogos() {
+        return this.service.conteudoJogos();
     }
+
+    @UseGuards(AuthGuard('jwt'))
+    @Get('conteudoFilmes_auth')
+    conteudoAuthFilmes() {
+        return this.service.conteudoFilmes();
+    }
+
+    /* @Get('getVideo')
+    getVideo(@Res() res: Response) {
+        res.setHeader('Content-Type', 'video/mp4');
+        const path = '../../front-end/videos/gta6.mp4';
+        const stream = createReadStream(path);
+        stream.pipe(res);
+
+    } */
 
 }

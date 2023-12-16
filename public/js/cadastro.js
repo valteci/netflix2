@@ -7,11 +7,6 @@ function enviarFormulario(event) {
     const senha = document.getElementById('inputSenha').value;
     const confirmarSenha = document.getElementById('inputConfirmarSenha').value;
 
-    if (senha.length < 8) {
-        alert("Senha deve ter no mínimo 8 caracteres");
-        return;
-    }
-
     if (senha !== confirmarSenha) {
         alert("Senhas não conferem!")
         return;
@@ -19,7 +14,7 @@ function enviarFormulario(event) {
         
 
     
-    fetch('http://192.168.25.133:3000/Auth/signup', {
+    fetch('http://192.168.25.133:8080/Auth/signup', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -37,9 +32,10 @@ function enviarFormulario(event) {
             return response.json();
         })
         .then(data => {
-            window.location.href = '/public/html/redirecionamento.html';
+            window.location.href = 'http://192.168.25.133:8080/home';
         })
         .catch(error => {
+            alert('Não foi possível fazer o cadastro!');
             console.error('Erro ao processar a resposta: ', error);
         });
 }

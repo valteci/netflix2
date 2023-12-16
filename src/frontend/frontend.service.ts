@@ -30,14 +30,26 @@ export class FrontendService {
         return pagina;
     }
 
-    async conteudo() {
-        const page = this.getPage('conteudo.html');
+    async conteudoJogos() {
+        const page = this.getPage('conteudoJogos.html');
         const pagina = readFileSync(page, 'utf-8');
         return pagina;
     }
 
-    async load() {
-        const page = this.getPage('load.html');
+    async conteudoFilmes() {
+        const page = this.getPage('conteudoFilmes.html');
+        const pagina = readFileSync(page, 'utf-8');
+        return pagina;
+    }
+
+    async loadFilmes() {
+        const page = this.getPage('loadFilmes.html');
+        const pagina = readFileSync(page, 'utf-8');
+        return pagina;
+    }
+
+    async loadJogos() {
+        const page = this.getPage('loadJogos.html');
         const pagina = readFileSync(page, 'utf-8');
         return pagina;
     }

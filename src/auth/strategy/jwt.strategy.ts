@@ -34,6 +34,7 @@ export class JwtStrategy extends PassportStrategy(
             throw new UnauthorizedException('Acesso não autorizado');
         }
         
+        console.log(dadosUsuario);
         return dadosUsuario;
     }
 
