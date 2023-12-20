@@ -9,7 +9,7 @@ function decrementarTempo() {
 
     if (tempoTotal <= 0) {
         clearInterval(timer);
-        window.location.href = 'http://MEU_IP:3000/frontend/home';
+        window.location.href = 'http://192.168.192.71:3000/frontend/home';
     }
 
 }

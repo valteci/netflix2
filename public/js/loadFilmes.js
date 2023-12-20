@@ -9,7 +9,7 @@ const acesso_negado = `
 </head>
 <body>
   <div class="unauthorized-wrapper">
-    <h1>FAÇA <a href="http://MEU_IP:8080/entrar">LOGIN<a> PARA ACESSAR ESSA PÁGINA OU <a href="http://MEU_IP:8080/cadastrar">CADASTRE-SE<a></h1>
+    <h1>FAÇA <a href="http://192.168.192.71:8080/entrar">LOGIN<a> PARA ACESSAR ESSA PÁGINA OU <a href="http://192.168.192.71:8080/cadastrar">CADASTRE-SE<a></h1>
   </div>  
 </body>
 </html>`
@@ -22,7 +22,7 @@ function carregarPaginaAcessoNegado() {
 
 function buscarConteudo() {
 
-    fetch('http://MEU_IP:8080/conteudoFilmes_auth', {
+    fetch('http://192.168.192.71:8080/conteudoFilmes_auth', {
       method: 'GET',
       headers: {
           Authorization: `Bearer ${localStorage.getItem('access_token')}`
